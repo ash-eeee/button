@@ -7,23 +7,27 @@
             body{
                 display: flex;
                 font-family: 'Roboto', sans-serif;
+                font-size: 13px;
+                color: #2f2f2f;
             }
             .info-button{
                 /*button font style*/
-                font-size: 13px;
-                color: #2f2f2f;
+                
 
                 /*button style*/
                 height: 22px;
                 border-radius:8px;
                 border: 1px solid #2f2f2f;
                 background-color: #ffffff;
-                outline: 1px #2f2f2f;
                 
                 padding: 0 18px;
                 line-height: 1px;
                 cursor: pointer;
                 margin-left:22px;
+            }
+            .info-button:active {
+                background-color: #ddd;
+                transform: translateY(1px); /* 按下去往下一點點 */
             }
         </style>
     </head>
