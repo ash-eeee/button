@@ -6,32 +6,67 @@
         <style>
             body{
                 display: flex;
+                flex-direction: column;
                 font-family: 'Roboto', sans-serif;
                 font-size: 13px;
                 color: #2f2f2f;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
             }
-            .info-button{
-                /*button font style*/
-                
+            .container{
+                width:496px;
+                position: relative;
+            }
+            .image{
+                width:100%;
+                display: block;
+            }
 
-                /*button style*/
+            .info-button{
+                position: absolute;
+                top: 10px;
+                right: 18px;
+
                 height: 22px;
                 border-radius:8px;
                 border: 1px solid #2f2f2f;
                 background-color: #ffffff;
                 
+                display: flex;
+                justify-content:center;
+                align-items: center;
+
                 padding: 0 18px;
-                line-height: 1px;
                 cursor: pointer;
-                margin-left:22px;
             }
             .info-button:active {
                 background-color: #ddd;
                 transform: translateY(1px); /* 按下去往下一點點 */
             }
+            #details{
+                display: none;
+                margin-top: 10px;
+                border: 1px;
+                padding: 10px;
+                width: 496px;
+                background-color:lightgray;
+            }
         </style>
     </head>
     <body>
-        <button class = "info-button">查看資訊</button>
+        <div class="container">
+            <img class="image" alt="Preview" src="https://blog.wego.com/wp-content/uploads/7_Things_to_Know_Before_Visiting_Germany_cnr6om.jpg">
+         
+           <button class = "info-button" onclick="document.getElementById('details').style.display='block'">查看資訊</button>
+        </div>
+
+        <div id="details">
+            <h3>詳細資訊</h3>
+            <p>修改日期：2026/04/22</p>
+            <p>類別：JPEG</p>
+            <p>大小：16 KB</p>
+            <p>路徑：https://blog.wego.com/7-things-know-visiting-germany/</p>
+        </div>
     </body>
 </html>
